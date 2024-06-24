@@ -1,0 +1,6 @@
+[submodule "rdf-dataset-fragmenter.js"]
+	path = rdf-dataset-fragmenter.js
+	url = git@github.com:surilindur/rdf-dataset-fragmenter.js.git
+[submodule "SolidBench.js"]
+	path = SolidBench.js
+	url = git@github.com:surilindur/SolidBench.js.git
