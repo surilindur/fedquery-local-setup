@@ -3,7 +3,7 @@ This setup required NodeJS, Docker and Docker Compose.
 Clone the repository, including the submodules:
 
 ```bash
-git clone --recurse-submodules it@github.com:surilindur/fedquery-local-setup.git
+git clone --recurse-submodules git@github.com:surilindur/fedquery-local-setup.git
 ```
 
 For `rdf-dataset-fragmenter.js`, enter the submodule directory and install the dependencies.
@@ -23,4 +23,10 @@ The endpoints can be started using Docker Compose:
 
 ```bash
 docker compose --file templates/endpoints.yaml up
+```
+
+To send a SPARQL query to the endpoint:
+
+```bash
+curl -X POST -d 'SELECT * WHERE { ?s ?p ?o }' -H 'Content-Type: application/sparql-query' http://localhost:3001/sparql?default-graph-uri=http://localhost:3000/pods/00000017592186045261/
 ```
